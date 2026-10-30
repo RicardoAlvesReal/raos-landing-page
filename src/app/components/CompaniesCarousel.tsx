@@ -1,16 +1,15 @@
 import { motion } from "motion/react";
-import { GraduationCap, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 interface Company {
   id: string;
   name: string;
   category: string;
   description: string;
-  logo?: string;
-  icon?: typeof GraduationCap;
+  logo: string;
   accentColor: string;
   link?: string;
-  metrics?: string;
+  metrics: string;
 }
 
 const companies: Company[] = [
@@ -56,8 +55,8 @@ const companies: Company[] = [
     name: "GR Educação",
     category: "Plataforma Educacional & EAD",
     description: "Ambiente virtual de aprendizagem, avaliações e gestão de cursos supletivos.",
-    icon: GraduationCap,
-    accentColor: "#10B981",
+    logo: "/logos/gredu.png",
+    accentColor: "#F37021",
     metrics: "EAD & Certificação",
   },
 ];
@@ -116,7 +115,6 @@ export function CompaniesCarousel() {
         {/* Trilho animado contínuo */}
         <div className="animate-marquee gap-6 py-2 px-3">
           {duplicatedCompanies.map((company, index) => {
-            const Icon = company.icon;
             const CardWrapper = company.link ? "a" : "div";
             const wrapperProps = company.link
               ? {
@@ -140,16 +138,11 @@ export function CompaniesCarousel() {
                         <img
                           src={company.logo}
                           alt={company.name}
-                          className="max-h-9 w-auto object-contain filter group-hover:brightness-110 transition-all duration-200"
+                          className={`max-h-9 w-auto object-contain filter group-hover:brightness-110 transition-all duration-200 ${
+                            company.id === "gredu" ? "bg-white/[0.08] p-1 rounded-md" : ""
+                          }`}
                           loading="lazy"
                         />
-                      ) : Icon ? (
-                        <div className="flex items-center gap-2 text-[#EEEEF5] font-semibold tracking-wide">
-                          <div className="w-8 h-8 rounded-lg bg-[#10B981]/15 border border-[#10B981]/30 flex items-center justify-center text-[#10B981]">
-                            <Icon size={18} />
-                          </div>
-                          <span className="text-base text-[#EEEEF5]">{company.name}</span>
-                        </div>
                       ) : (
                         <span className="text-base font-bold text-[#EEEEF5]">{company.name}</span>
                       )}
