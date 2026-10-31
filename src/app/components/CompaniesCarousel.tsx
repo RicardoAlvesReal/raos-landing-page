@@ -30,6 +30,7 @@ const companies: Company[] = [
     description: "Controle de ordens de serviço, estoque, fluxo financeiro e operação mecânica.",
     logo: "/logos/cardanos.png",
     accentColor: "#3B82F6",
+    link: "https://www.cardanos.com.br",
     metrics: "ERP Automotivo",
   },
   {
@@ -39,6 +40,7 @@ const companies: Company[] = [
     description: "Gestão completa de academias de Jiu-Jitsu, alunos, graduações e pagamentos.",
     logo: "/logos/bjjrats.png",
     accentColor: "#E11D48",
+    link: "https://thebjjrats.com",
     metrics: "SaaS Ativo",
   },
   {
@@ -48,6 +50,7 @@ const companies: Company[] = [
     description: "Experiência interativa em tempo real via QR Code para bares e casas de show.",
     logo: "/logos/vokalix.png",
     accentColor: "#A855F7",
+    link: "https://vokalix.com.br",
     metrics: "Realtime WebSockets",
   },
   {
@@ -57,6 +60,7 @@ const companies: Company[] = [
     description: "Ambiente virtual de aprendizagem, avaliações e gestão de cursos supletivos.",
     logo: "/logos/gredu.png",
     accentColor: "#F37021",
+    link: "https://gredu.com.br",
     metrics: "EAD & Certificação",
   },
 ];
